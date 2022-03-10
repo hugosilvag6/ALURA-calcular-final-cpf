@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Cálculo de CPF</title>
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/bootstrap-theme.css" />
+    </head>
+
+    <body class="container">
+        <h1 class="text-left">Cálculo do Digito Verificador para CPF</h1>
+        <span>
+            <big>
+                Esta página calcula os dígitos verificadores do CPF a partir do Módulo 11. Informe o número de CPF sem os
+                dígitos (apenas os 9 primeiros números) e clique em Calcular para descobrir os 2 últimos dígitos.
+            </big>
+        </span>
+        <br><br>
+        <form class="form">
+           
+                <div class="form-group">
+                    <label for="target">9 primeiros dígitos do CPF:</label>
+                    <input
+                        type="number"
+                        id="novedigitos"
+                        class="form-control"
+                        value=""
+                        autocomplete="off"
+                        required
+                        autofocus
+                        placeholder="Informe os 9 primeiros dígitos"
+                    />
+                </div>
+                <div class="form-group" display:flex>
+                    <label for="pattern">Dígitos verificadores:</label>
+                    <input id="resultado" class="form-control" value="" autocomplete="off" required placeholder="Cálculo" readonly/>
+                </div>
+           
+            <div class="form-group">
+                <button class="btn btn-primary" id="botao-calcular">Calcular</button>
+            </div>
+        </form>
+        <script src="js/cpf.js"></script>
+    </body>
+</html>
